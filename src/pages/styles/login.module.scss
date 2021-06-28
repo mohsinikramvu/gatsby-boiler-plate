@@ -1,0 +1,114 @@
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  @media (max-width: 767px) {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .error {
+    padding: 12px 15px;
+    background: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #282c34;
+  }
+  .loginHeader {
+    margin-bottom: 30px;
+    .img {
+      height: 16vmin;
+      pointer-events: none;
+    }
+  }
+  .loginBody {
+    text-align: left;
+    width: 400px;
+    @media (max-width: 767px) {
+      width: auto;
+    }
+    .form {
+      .formGroup {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        .label {
+          //color: #d4c289;
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 10px;
+        }
+        .inputField {
+          padding: 10px 15px;
+          border: none;
+          border-radius: 0;
+          color: #282c34;
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+      }
+      .formFooter {
+        display: flex;
+        align-items: center;
+        margin: 25px 0 5px 0;
+        .loader {
+          margin-left: 10px;
+          border: 2px dashed aliceblue;
+          border-radius: 50%;
+          border-top: 2px dashed #61dafb;
+          width: 25px;
+          height: 25px;
+          -webkit-animation: spin 2s linear infinite; /* Safari */
+          animation: spin 2s linear infinite;
+          /* Safari */
+          @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+          }
+          @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+          }
+        }
+        .btn {
+          padding: 6px 26px;
+          font-size: 18px;
+          line-height: 24px;
+          color: #282c34;
+          background-color: #61dafb;
+          cursor: pointer;
+          border: none;
+          border-radius: 0;
+          outline: none;
+          text-align: center;
+          margin: 4px 2px;
+          transition: 0.3s;
+          &:hover {
+            color: #282c34;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+    .text {
+      text-align: right;
+      font-size: 14px;
+      line-height: 20px;
+      .link {
+        text-decoration: none;
+        color: #ffffff;
+        transition: .3s;
+        cursor: pointer;
+        font-weight: bold;
+        background: transparent;
+        padding: 0;
+        border: none;
+        outline: 0;
+        &:hover {
+          color: #61dafb;
+        }
+      }
+    }
+  }
+}
